@@ -1,0 +1,13 @@
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\bin\Debug\netcoreapp3.1\Estruturadedecisao.exe
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\bin\Debug\netcoreapp3.1\Estruturadedecisao.deps.json
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\bin\Debug\netcoreapp3.1\Estruturadedecisao.runtimeconfig.json
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\bin\Debug\netcoreapp3.1\Estruturadedecisao.runtimeconfig.dev.json
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\bin\Debug\netcoreapp3.1\Estruturadedecisao.dll
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\bin\Debug\netcoreapp3.1\Estruturadedecisao.pdb
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\obj\Debug\netcoreapp3.1\Estruturadedecisao.csprojAssemblyReference.cache
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\obj\Debug\netcoreapp3.1\Estruturadedecisao.AssemblyInfoInputs.cache
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\obj\Debug\netcoreapp3.1\Estruturadedecisao.AssemblyInfo.cs
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\obj\Debug\netcoreapp3.1\Estruturadedecisao.csproj.CoreCompileInputs.cache
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\obj\Debug\netcoreapp3.1\Estruturadedecisao.dll
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\obj\Debug\netcoreapp3.1\Estruturadedecisao.pdb
+C:\Users\Marcos Vinicius\source\repos\Estruturadedecisao\Estruturadedecisao\obj\Debug\netcoreapp3.1\Estruturadedecisao.genruntimeconfig.cache
