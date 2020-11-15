@@ -70,7 +70,14 @@ namespace Estruturadedecisao
                     Console.Clear();
                     Exercicio9();
                     break;
+                case 10:
+                    Console.Clear();
+                    Exercicio10();
+                    break;
             }
+            
+            Console.Clear();
+            TelaInicial();
         }
         public static void SegundaTela()
         {
@@ -96,7 +103,17 @@ namespace Estruturadedecisao
                     Console.Clear();
                     TerceiraTela();
                     break;
+                case 1:
+                    Console.Clear();
+                    Exercicio11();
+                    break;
+                case 2:
+                    Console.Clear();
+                    Exercicio12();
+                    break;
             }
+            Console.Clear();
+            TelaInicial();
         }
         public static void TerceiraTela()
         {
@@ -121,6 +138,8 @@ namespace Estruturadedecisao
                     TelaInicial();
                     break;
             }
+            Console.Clear();
+            TelaInicial();
         }
 
         public static void EscolhaDeTela()
@@ -547,14 +566,28 @@ namespace Estruturadedecisao
             Console.WriteLine("");
             Console.WriteLine("Digite os três numeros: ");
             string[] numeros = Console.ReadLine().Split(' ');
-            double nun1 = 0;
-            double nun2 = 0;
-            double nun3 = 0;
-            if (double.TryParse(numeros[0], out nun1) && double.TryParse(numeros[1], out nun2) && double.TryParse(numeros[2], out nun3))
+            string a = "";
+            int nun1 = 0;
+            int nun2 = 0;
+            int nun3 = 0;
+            if (int.TryParse(numeros[0], out nun1) && int.TryParse(numeros[1], out nun2) && int.TryParse(numeros[2], out nun3))
             {
-                
+                int[] numerosint = Array.ConvertAll(numeros, s => int.Parse(s));
+                bubblesort(numerosint);
+                for (int i = 0; i < numerosint.Length; i++)
+                {
+                    a += " " + numerosint[i];
+                    Console.WriteLine("|----------------------------------------|");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine($"A forma ordenada decrescente dos numeros são: {a}");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine("|----------------------------------------|");
+                }
+
+
 
             }
+
             else
             {
                 Console.WriteLine("numero Inválido");
@@ -564,8 +597,180 @@ namespace Estruturadedecisao
             EscolhaDeTela();
 
         }
+
+        // criando o método bubblesort
+        public static void bubblesort(int[] y)
+        {
+            for (int i = 1; i < y.Length; i++)
+                for (int j = 0; j < y.Length - 1; j++)
+                    if (y[j] < y[j + 1])
+                        troca(y, j);
+        }
+        // algoritmo de troca de valores de variáveis:
+        public static void troca(int[] g, int primeiro)
+        {
+            int aux;
+            aux = g[primeiro];
+            g[primeiro] = g[primeiro + 1];
+            g[primeiro + 1] = aux;
+        }
+        public static void Exercicio10()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 10 ----------------------------||");
+            Console.WriteLine("Pergunta: Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno ");
+            Console.WriteLine("Imprima a mensagem Bom Dia!, Boa Tarde! ou Boa Noite! ou Valor Inválido!, conforme o caso.");
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------------------------");
+            Console.WriteLine("----------------------- Que turno você estuda ? -----------------------");
+            Console.WriteLine("--- DIGITE M para Matutino --- V para Vespertino --- N para noturno ---");
+            string entrada = Console.ReadLine();
+            Console.WriteLine("");
+            if (entrada.ToLower() == "m")
+            {
+                Console.WriteLine("Bom dia!");
+                Console.WriteLine("|                                        |");
+                Console.WriteLine("|----------------------------------------|");
+            }
+            else if (entrada.ToLower() == "v")
+            {
+                Console.WriteLine("Boa tarde!");
+                Console.WriteLine("|                                        |");
+                Console.WriteLine("|----------------------------------------|");
+            }
+            else if (entrada.ToLower() == "n")
+            {
+                Console.WriteLine("Boa noite!");
+                Console.WriteLine("|                                        |");
+                Console.WriteLine("|----------------------------------------|");
+            }
+            else
+            {
+                Console.WriteLine("Valor invalido!");
+                Console.WriteLine("|                                        |");
+                Console.WriteLine("|----------------------------------------|");
+            }
+
+            EscolhaDeTela();
+        }
+        public static void Exercicio11()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 11 ----------------------------||");
+            Console.WriteLine("Pergunta: As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para");
+            Console.WriteLine("desenvolver o programa que calculará os reajustes.");
+            Console.WriteLine("");
+            Console.WriteLine("Digite seu salário atual: ");
+            double salarioAtual = double.Parse(Console.ReadLine());
+            double aumento20 = (salarioAtual * 20) / 100;
+            double aumento15 = (salarioAtual * 15) / 100;
+            double aumento10 = (salarioAtual * 10) / 100;
+            double aumento5 = (salarioAtual * 5) / 100;
+            Console.WriteLine("");
+            Console.WriteLine($"Salario antes do reajuste: R$:{salarioAtual}");
+            Console.WriteLine("");
+            if (salarioAtual < 280) 
+            {
+                Console.WriteLine("o percentual de aumento aplicado: 20%");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o valor do aumento: R$:{aumento20:f2}");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o novo salário, após o aumento R$:{salarioAtual + aumento20:f2}");
+            }
+            if (salarioAtual >= 280 && salarioAtual < 700)
+            {
+                Console.WriteLine("o percentual de aumento aplicado: 15%");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o valor do aumento: R$:{aumento15:f2}");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o novo salário, após o aumento R$:{salarioAtual + aumento15:f2}"); ;
+            }
+            if (salarioAtual >= 700 && salarioAtual < 1500)
+            {
+                Console.WriteLine("o percentual de aumento aplicado: 10%");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o valor do aumento: R$:{aumento10:f2}");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o novo salário, após o aumento R$:{salarioAtual + aumento10:f2}");
+            }
+            if (salarioAtual >= 1500)
+            {
+                Console.WriteLine("o percentual de aumento aplicado: 5%");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o valor do aumento: R$:{aumento5:f2}");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine($"o novo salário, após o aumento R$:{salarioAtual + aumento5:f2}");
+            }
+
+
+            EscolhaDeTela();
+
+        }
+        public static void Exercicio12()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 12 ----------------------------||");
+            Console.WriteLine("Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda,");
+            Console.WriteLine(" que depende do salário bruto(conforme tabela abaixo) e 3 % para o Sindicato e que o FGTS corresponde a 11 % do SalárioBruto");
+            Console.WriteLine("mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos osdescontos");
+            Console.WriteLine("Pergunta:  O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês");
+            Console.WriteLine("");
+            Console.WriteLine("Digite o valor da sua hora trabalhada");
+            double valorTrabalhado = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a quantidade de horas trabalhadas no mês");
+            double horaTrabalhada = double.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            double salarioBruto = valorTrabalhado * horaTrabalhada;
+            double ir = (salarioBruto * 5) / 100;
+            double inss = (salarioBruto * 10) / 100;
+            double fgts = (salarioBruto * 11) / 100;
+            double acima2500 = (salarioBruto * 20) / 100;
+
+            if (salarioBruto <= 900)
+            {
+                Console.WriteLine($"Sálario Bruto {valorTrabalhado} * {horaTrabalhada}: R${salarioBruto}");
+                Console.WriteLine($"(-) IR (5%) :R$ {ir} ISENTO ");
+                Console.WriteLine($"(-) INSS (10%): R$: {inss}");
+                Console.WriteLine($"FGTS (11%) : R$ {fgts}");
+                Console.WriteLine($"Total de descontos : R$ {inss}");
+                Console.WriteLine($"Salário Liquido : R$ {salarioBruto - inss}");
+            }
+            else if (salarioBruto > 900 && salarioBruto <= 1500)
+            {
+                Console.WriteLine($"Sálario Bruto {valorTrabalhado} * {horaTrabalhada}: R${salarioBruto}");
+                Console.WriteLine($"(-) IR (5%) :R$ {ir} ");
+                Console.WriteLine($"(-) INSS (10%): R$: {inss}");
+                Console.WriteLine($"FGTS (11%) : R$ {fgts}");
+                Console.WriteLine($"Total de descontos : R$ {inss}");
+                Console.WriteLine($"Salário Liquido : R$ {(salarioBruto - ir) - inss} ");
+            }
+            else if (salarioBruto > 1500 && salarioBruto <= 2500)
+            {
+                Console.WriteLine($"Sálario Bruto {valorTrabalhado} * {horaTrabalhada}: R${salarioBruto}");
+                Console.WriteLine($"(-) IR (5%) :R$ {ir} ");
+                Console.WriteLine($"(-) INSS (10%): R$: {inss}");
+                Console.WriteLine($"FGTS (11%) : R$ {fgts}");
+                Console.WriteLine($"Total de descontos : R$ {inss}");
+                Console.WriteLine($"Salário Liquido : R$ {(salarioBruto - ir) - inss} ");
+            }
+            else 
+            {
+                Console.WriteLine($"Sálario Bruto {valorTrabalhado} * {horaTrabalhada}: R${salarioBruto}");
+                Console.WriteLine($"(-) IR (5%) :R$ {ir} ");
+                Console.WriteLine($"(-) INSS (10%): R$: {inss}");
+                Console.WriteLine($"FGTS (11%) : R$ {fgts}");
+                Console.WriteLine($"Total de descontos : R$ {inss}");
+                Console.WriteLine($"Salário Liquido : R$ {salarioBruto - acima2500} ");
+            }
+
+
+
+            EscolhaDeTela();
+
+        }
+
     }
 }
+
+
+
 
 
 
@@ -580,3 +785,4 @@ namespace Estruturadedecisao
     EscolhaDeTela();
 
 }*/
+
