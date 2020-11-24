@@ -75,7 +75,7 @@ namespace Estruturadedecisao
                     Exercicio10();
                     break;
             }
-            
+
             Console.Clear();
             TelaInicial();
         }
@@ -110,6 +110,38 @@ namespace Estruturadedecisao
                 case 2:
                     Console.Clear();
                     Exercicio12();
+                    break;
+                case 3:
+                    Console.Clear();
+                    Exercicio13();
+                    break;
+                case 4:
+                    Console.Clear();
+                    Exercicio14();
+                    break;
+                case 5:
+                    Console.Clear();
+                    Exercicio15();
+                    break;
+                case 6:
+                    Console.Clear();
+                    Exercicio16();
+                    break;
+                case 7:
+                    Console.Clear();
+                    Exercicio17();
+                    break;
+                case 8:
+                    Console.Clear();
+                    Exercicio18();
+                    break;
+                case 9:
+                    Console.Clear();
+                    Exercicio19();
+                    break;
+                case 10:
+                    Console.Clear();
+                    Exercicio20();
                     break;
             }
             Console.Clear();
@@ -320,15 +352,18 @@ namespace Estruturadedecisao
             Console.WriteLine("A mensagem Reprovado, se a média for menor do que sete");
             Console.WriteLine("A mensagem Aprovado com Distinção, se a média for igual a dez");
             Console.WriteLine("");
-            Console.WriteLine("Digite as notas do aluno: ");
-            string[] notas = Console.ReadLine().Split(' ');
-            double nota1 = 0;
-            double nota2 = 0;
-            double somanotas = nota1 + nota2;
-            double divisãonotas = somanotas / 2;
-            if (double.TryParse(notas[0], out nota1) && double.TryParse(notas[1], out nota2))
+            Console.WriteLine("Digite a primeira nota do aluno: ");
+            string nota1 = Console.ReadLine();
+            Console.WriteLine("Digite a segunda nota do aluno: ");
+            string nota2 = Console.ReadLine();
+            double n1 = 0;
+            double n2 = 0;
+
+            if (double.TryParse(nota1, out n1) && double.TryParse(nota2, out n2))
             {
-                if (somanotas >= 7)
+                double mediaDeNotas = (n1 + n2) / 2;
+
+                if (mediaDeNotas >= 7)
                 {
                     Console.WriteLine("");
                     Console.WriteLine("|----------------------------------------|");
@@ -336,9 +371,8 @@ namespace Estruturadedecisao
                     Console.WriteLine("O aluno foi Aprovado!");
                     Console.WriteLine("|                                        |");
                     Console.WriteLine("|----------------------------------------|");
-
                 }
-                else if (somanotas < 7)
+                else if (mediaDeNotas < 7)
                 {
                     Console.WriteLine("");
                     Console.WriteLine("|----------------------------------------|");
@@ -347,7 +381,7 @@ namespace Estruturadedecisao
                     Console.WriteLine("|                                        |");
                     Console.WriteLine("|----------------------------------------|");
                 }
-                else if (divisãonotas == 10)
+                else if (mediaDeNotas == 10)
                 {
                     Console.WriteLine("");
                     Console.WriteLine("|----------------------------------------|");
@@ -356,14 +390,17 @@ namespace Estruturadedecisao
                     Console.WriteLine("|                                        |");
                     Console.WriteLine("|----------------------------------------|");
                 }
+                else 
+                {
+                    Console.WriteLine("nota Inválida");
+
+                }
+
+
 
             }
-            else
-            {
-                Console.WriteLine("nota Inválida");
-            }
-
             EscolhaDeTela();
+
         }
         public static void Exercicio6()
         {
@@ -667,7 +704,7 @@ namespace Estruturadedecisao
             Console.WriteLine("");
             Console.WriteLine($"Salario antes do reajuste: R$:{salarioAtual}");
             Console.WriteLine("");
-            if (salarioAtual < 280) 
+            if (salarioAtual < 280)
             {
                 Console.WriteLine("o percentual de aumento aplicado: 20%");
                 Console.WriteLine("-------------------------------------");
@@ -750,7 +787,7 @@ namespace Estruturadedecisao
                 Console.WriteLine($"Total de descontos : R$ {inss}");
                 Console.WriteLine($"Salário Liquido : R$ {(salarioBruto - ir) - inss} ");
             }
-            else 
+            else
             {
                 Console.WriteLine($"Sálario Bruto {valorTrabalhado} * {horaTrabalhada}: R${salarioBruto}");
                 Console.WriteLine($"(-) IR (5%) :R$ {ir} ");
@@ -762,6 +799,184 @@ namespace Estruturadedecisao
 
 
 
+            EscolhaDeTela();
+
+        }
+        public static void Exercicio13()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 13 ----------------------------||");
+            Console.WriteLine("Pergunta: Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar");
+            Console.WriteLine("outro valor deve aparecer valor inválido");
+            Console.WriteLine("");
+            Console.WriteLine("Digite o numero: ");
+            string numero = Console.ReadLine();
+            int numeroDaSemana = 0;
+            if (int.TryParse(numero, out numeroDaSemana))
+            {
+
+                if (numeroDaSemana == 1)
+                {
+                    Console.WriteLine("Domingo");
+                }
+                else if (numeroDaSemana == 2)
+                {
+                    Console.WriteLine("Segunda-Feira");
+                }
+                else if (numeroDaSemana == 3)
+                {
+                    Console.WriteLine("Terça-Feira");
+                }
+                else if (numeroDaSemana == 4)
+                {
+                    Console.WriteLine("Quarta-Feira");
+                }
+                else if (numeroDaSemana == 5)
+                {
+                    Console.WriteLine("Quinta-Feira");
+                }
+                else if (numeroDaSemana == 6)
+                {
+                    Console.WriteLine("Sexta-Feira");
+                }
+                else if (numeroDaSemana == 7)
+                {
+                    Console.WriteLine("Sabado");
+                }
+                else 
+                {
+                    Console.WriteLine("Numero Invalido");
+                }
+
+                Console.WriteLine("");
+                EscolhaDeTela();
+            }
+
+
+        }
+        public static void Exercicio14()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 14 ----------------------------||");
+            Console.WriteLine("Pergunta:Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule");
+            Console.WriteLine("a sua média");
+            Console.WriteLine("");
+            Console.WriteLine("Digite a primeira nota do aluno: ");
+            string primeiraNota = Console.ReadLine();
+            Console.WriteLine("Digite a segunda nota do aluno: ");
+            string segundaNota = Console.ReadLine();
+            Console.WriteLine("");
+            double nota1 = 0;
+            double nota2 = 0;
+
+            if (double.TryParse(primeiraNota, out nota1) && double.TryParse(segundaNota, out nota2))
+            {
+                double mediaDeNotas = (nota1 +nota2)/2;
+
+                if (mediaDeNotas == 9 && mediaDeNotas < 10)
+                {
+                    Console.WriteLine($"Media:{mediaDeNotas:f2}, APROVADO");
+                    Console.WriteLine("Conceito A aplicado!");
+                }
+                else if (mediaDeNotas == 7.5 && mediaDeNotas < 9)
+                {
+                    Console.WriteLine($"Media:{mediaDeNotas:f2}, APROVADO");
+                    Console.WriteLine("Conceito B aplicado!");
+                }
+                else if (mediaDeNotas == 6 && mediaDeNotas < 7.5)
+                {
+                    Console.WriteLine($"Media:{mediaDeNotas:f2}, APROVADO");
+                    Console.WriteLine("Conceito C aplicado!");
+                }
+                else if (mediaDeNotas == 4 && mediaDeNotas < 6)
+                {
+                    Console.WriteLine($"Media:{mediaDeNotas:f2}, REPROVADO");
+                    Console.WriteLine("Conceito D aplicado!");
+                }
+                else if (mediaDeNotas == 0 && mediaDeNotas < 4)
+                {
+                    Console.WriteLine($"Media:{mediaDeNotas:f2}, REPROVADO");
+                    Console.WriteLine("Conceito C aplicado!");
+                }
+                else 
+                {
+                    Console.WriteLine("Numero Invalido");
+
+                }
+
+            }
+            EscolhaDeTela();
+
+        }
+        public static void Exercicio15()
+        {
+           /* Console.WriteLine("||---------------------- EXERCICIO 15 ----------------------------||");
+            Console.WriteLine("Pergunta: Faça um Programa que peça os 3 lados de um triângulo ");
+            Console.WriteLine("");
+            Console.WriteLine("Digite o primeiro lado: ");
+            string primeiroLado = Console.ReadLine();
+            Console.WriteLine("Digite o segundo lado: ");
+            string segundoLado = Console.ReadLine();
+            Console.WriteLine("Digite o terceiro lado: ");
+            string terceiroLado = Console.ReadLine();
+            Console.WriteLine("");
+            double l1 = 0;
+            double l2 = 0;
+            double l3 = 0;
+            if (double.TryParse(primeiroLado, out l1) && double.TryParse(segundoLado, out l2) && double.TryParse(terceiroLado, out l3)) 
+            {
+                if (((l1 + l2 + l3) / 3) == 0)
+                {
+                    Console.WriteLine("Triângulo Equilátero: três lados iguais");
+                }
+                else if ((((l1 + l2)/2) == 0) && (((l1 + l3)/2) == 0) && (((l2 + l1)/2) == 0) && (((l2 + l3)/2) == 0) && (((l3 + l1)/2) == 0) && (((l3 + l2)/2) == 0))
+                {
+                    Console.WriteLine("Triângulo Isósceles: quaisquer dois lados iguais");
+                }
+                else if (((l1 + l2 + l3) / 3) == 1)
+                {
+                    Console.WriteLine("Triângulo Escaleno: três lados diferentes;");
+                }
+                else 
+                {
+                    Console.WriteLine("Numero Invalido");
+                }
+            
+            }
+
+            EscolhaDeTela();
+           */
+        }
+        public static void Exercicio16()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 16 ----------------------------||");
+            Console.WriteLine("Pergunta: ");
+            EscolhaDeTela();
+
+        }
+        public static void Exercicio17()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 17 ----------------------------||");
+            Console.WriteLine("Pergunta: ");
+            EscolhaDeTela();
+
+        }
+        public static void Exercicio18()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 18 ----------------------------||");
+            Console.WriteLine("Pergunta: ");
+            EscolhaDeTela();
+
+        }
+        public static void Exercicio19()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 19 ----------------------------||");
+            Console.WriteLine("Pergunta: ");
+            EscolhaDeTela();
+
+        }
+        public static void Exercicio20()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 20 ----------------------------||");
+            Console.WriteLine("Pergunta: ");
             EscolhaDeTela();
 
         }
@@ -785,4 +1000,5 @@ namespace Estruturadedecisao
     EscolhaDeTela();
 
 }*/
+
 
