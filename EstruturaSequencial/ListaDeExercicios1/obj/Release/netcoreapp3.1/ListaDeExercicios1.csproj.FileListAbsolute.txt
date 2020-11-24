@@ -1,0 +1,13 @@
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\bin\Release\netcoreapp3.1\ListaDeExercicios1.exe
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\bin\Release\netcoreapp3.1\ListaDeExercicios1.deps.json
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\bin\Release\netcoreapp3.1\ListaDeExercicios1.runtimeconfig.json
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\bin\Release\netcoreapp3.1\ListaDeExercicios1.runtimeconfig.dev.json
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\bin\Release\netcoreapp3.1\ListaDeExercicios1.dll
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\bin\Release\netcoreapp3.1\ListaDeExercicios1.pdb
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\obj\Release\netcoreapp3.1\ListaDeExercicios1.csprojAssemblyReference.cache
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\obj\Release\netcoreapp3.1\ListaDeExercicios1.AssemblyInfoInputs.cache
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\obj\Release\netcoreapp3.1\ListaDeExercicios1.AssemblyInfo.cs
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\obj\Release\netcoreapp3.1\ListaDeExercicios1.csproj.CoreCompileInputs.cache
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\obj\Release\netcoreapp3.1\ListaDeExercicios1.dll
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\obj\Release\netcoreapp3.1\ListaDeExercicios1.pdb
+C:\Users\Marcos Vinicius\source\repos\ListaDeExercicios1\ListaDeExercicios1\obj\Release\netcoreapp3.1\ListaDeExercicios1.genruntimeconfig.cache
