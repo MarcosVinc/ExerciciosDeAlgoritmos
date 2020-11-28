@@ -390,7 +390,7 @@ namespace Estruturadedecisao
                     Console.WriteLine("|                                        |");
                     Console.WriteLine("|----------------------------------------|");
                 }
-                else 
+                else
                 {
                     Console.WriteLine("nota Inválida");
 
@@ -842,7 +842,7 @@ namespace Estruturadedecisao
                 {
                     Console.WriteLine("Sabado");
                 }
-                else 
+                else
                 {
                     Console.WriteLine("Numero Invalido");
                 }
@@ -869,7 +869,7 @@ namespace Estruturadedecisao
 
             if (double.TryParse(primeiraNota, out nota1) && double.TryParse(segundaNota, out nota2))
             {
-                double mediaDeNotas = (nota1 +nota2)/2;
+                double mediaDeNotas = (nota1 + nota2) / 2;
 
                 if (mediaDeNotas == 9 && mediaDeNotas < 10)
                 {
@@ -896,7 +896,7 @@ namespace Estruturadedecisao
                     Console.WriteLine($"Media:{mediaDeNotas:f2}, REPROVADO");
                     Console.WriteLine("Conceito C aplicado!");
                 }
-                else 
+                else
                 {
                     Console.WriteLine("Numero Invalido");
 
@@ -908,7 +908,7 @@ namespace Estruturadedecisao
         }
         public static void Exercicio15()
         {
-           /* Console.WriteLine("||---------------------- EXERCICIO 15 ----------------------------||");
+            Console.WriteLine("||---------------------- EXERCICIO 15 ----------------------------||");
             Console.WriteLine("Pergunta: Faça um Programa que peça os 3 lados de um triângulo ");
             Console.WriteLine("");
             Console.WriteLine("Digite o primeiro lado: ");
@@ -921,29 +921,31 @@ namespace Estruturadedecisao
             double l1 = 0;
             double l2 = 0;
             double l3 = 0;
-            if (double.TryParse(primeiroLado, out l1) && double.TryParse(segundoLado, out l2) && double.TryParse(terceiroLado, out l3)) 
+            if (double.TryParse(primeiroLado, out l1) && double.TryParse(segundoLado, out l2) && double.TryParse(terceiroLado, out l3))
             {
-                if (((l1 + l2 + l3) / 3) == 0)
+                if ((l1 == l2) && (l1 == l3) && (l2 == l1) && (l2 == l3) && (l3 == l1) && (l3 ==l2))
                 {
                     Console.WriteLine("Triângulo Equilátero: três lados iguais");
                 }
-                else if ((((l1 + l2)/2) == 0) && (((l1 + l3)/2) == 0) && (((l2 + l1)/2) == 0) && (((l2 + l3)/2) == 0) && (((l3 + l1)/2) == 0) && (((l3 + l2)/2) == 0))
+                else if (((l1 == l2) && (l1 != l3)) || ((l2 == l1) && (l2 != l3)) || ((l3 == l1) && (l3 != l2)))
+
+
                 {
                     Console.WriteLine("Triângulo Isósceles: quaisquer dois lados iguais");
                 }
-                else if (((l1 + l2 + l3) / 3) == 1)
+                else if ((l1 != l2) && (l1 != l3) && (l2 != l1) && (l2 != l3) && (l3 != l1) && (l3 != l2))
                 {
                     Console.WriteLine("Triângulo Escaleno: três lados diferentes;");
                 }
-                else 
+                else
                 {
                     Console.WriteLine("Numero Invalido");
                 }
-            
+
             }
 
             EscolhaDeTela();
-           */
+
         }
         public static void Exercicio16()
         {
