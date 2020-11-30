@@ -923,7 +923,7 @@ namespace Estruturadedecisao
             double l3 = 0;
             if (double.TryParse(primeiroLado, out l1) && double.TryParse(segundoLado, out l2) && double.TryParse(terceiroLado, out l3))
             {
-                if ((l1 == l2) && (l1 == l3) && (l2 == l1) && (l2 == l3) && (l3 == l1) && (l3 ==l2))
+                if ((l1 == l2) && (l1 == l3) && (l2 == l1) && (l2 == l3) && (l3 == l1) && (l3 == l2))
                 {
                     Console.WriteLine("Triângulo Equilátero: três lados iguais");
                 }
@@ -950,21 +950,136 @@ namespace Estruturadedecisao
         public static void Exercicio16()
         {
             Console.WriteLine("||---------------------- EXERCICIO 16 ----------------------------||");
-            Console.WriteLine("Pergunta: ");
+            Console.WriteLine("Pergunta:Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. ");
+            Console.WriteLine("O programa deverá pedir os valores de a, b e c e fazer as consistências");
+            Console.WriteLine("");
+            Console.WriteLine("Digite o valor de A:");
+            string valorA = Console.ReadLine();
+            double a = 0;
+            if (double.TryParse(valorA, out a))
+            {
+                if (a == 0)
+                {
+                    Console.WriteLine("Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado");
+                    Console.WriteLine("");
+                    Console.WriteLine("Tchau!");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Exercicio16();
+                }
+
+            }
+            Console.WriteLine("Digite o valor de B:");
+            string valorB = Console.ReadLine();
+            Console.WriteLine("Digite o valor de C:");
+            string valorC = Console.ReadLine();
+            double b = 0;
+            double c = 0;
+            if (double.TryParse(valorB, out b) && double.TryParse(valorC, out c))
+            {
+                double calculoDeltaPotencia = b * b;
+                double calculoDeltaQuatro = -4 * a;
+                double calculoDeltaMeio = calculoDeltaQuatro * c;
+                double Delta = calculoDeltaPotencia + calculoDeltaMeio;
+
+                if (Delta < 0)
+                {
+
+                    Console.WriteLine($"Se o delta calculado for negativo, a equação não possui raizes reais.");
+                    Console.WriteLine($"Informe ao usuário e encerre o programa DELTA {Delta}");
+                    Console.WriteLine("Tchau!");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Exercicio16();
+
+                }
+                else if (Delta == 0)
+                {
+                    double valorDeX = (-b) / 2 * a; ;
+                    Console.WriteLine(". Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;");
+                    Console.WriteLine($"RAIZ {valorDeX}");
+
+                }
+                else if (Delta > 0)
+                {
+                    double raizMaisA = -b + (Math.Sqrt(Delta));
+                    double raizMaisFinal = raizMaisA / (2 * a);
+                    double raizMenosA = -b - (Math.Sqrt(Delta));
+                    double raizMenosFinal = raizMenosA / (2 * a);
+
+                    double raizDeMenos = (-b - (Math.Sqrt(Delta)) / (2 * a));
+                    Console.WriteLine(". Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;");
+                    Console.WriteLine($"RAIZ  do +: {raizMaisFinal}");
+                    Console.WriteLine($"RAIZ  do -: {raizDeMenos}");
+
+
+                }
+
+            }
+
             EscolhaDeTela();
 
         }
+
+
         public static void Exercicio17()
         {
-            Console.WriteLine("||---------------------- EXERCICIO 17 ----------------------------||");
-            Console.WriteLine("Pergunta: ");
+                Console.WriteLine("||---------------------- EXERCICIO 17 ----------------------------||");
+                Console.WriteLine("Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto");
+                Console.WriteLine("Digite o ano: ");
+                string ano = Console.ReadLine();
+                double anoBissexto = 0;
+                if (double.TryParse(ano, out anoBissexto))
+                {
+
+
+                    if (((anoBissexto % 400) == 0) || (anoBissexto % 4 == 0 && anoBissexto % 100 != 0))
+                    {
+                        Console.WriteLine("Ano Bissexto");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Esse ano não é bissexto");
+                    }
+
+                }
+
+            
             EscolhaDeTela();
 
         }
         public static void Exercicio18()
         {
             Console.WriteLine("||---------------------- EXERCICIO 18 ----------------------------||");
-            Console.WriteLine("Pergunta: ");
+            Console.WriteLine("Pergunta: Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida ");
+            Console.WriteLine("");
+            Console.WriteLine("Digite a data desejada: ");
+            Console.WriteLine("Digite o Dia:");
+            string diaPrimeiro = Console.ReadLine();
+            Console.WriteLine("Digite o Mês:");
+            string mesPrimeiro = Console.ReadLine();
+            Console.WriteLine("Digite o Ano:");
+            string anoPrimeiro = Console.ReadLine();
+            int dia = 0;
+            int mes = 0;
+            int ano = 0;
+            if (int.TryParse(diaPrimeiro, out dia) && int.TryParse(mesPrimeiro, out mes) && int.TryParse(anoPrimeiro, out ano))
+            {
+                if ((dia > 31 && dia <= 0) || (mes > 12 && mes < 1) || (ano <= 0))
+                {
+                    Console.WriteLine("Esse ano non exziste!");
+
+                }
+                else
+                {
+
+                    Console.WriteLine($"A DATA QUE VOCÊ ESCREVEU FOI: {dia}/{mes}/{ano}");
+                }
+
+
+            }
+
             EscolhaDeTela();
 
         }
