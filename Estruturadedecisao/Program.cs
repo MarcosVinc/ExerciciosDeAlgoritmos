@@ -1,8 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Runtime.InteropServices;
 using System.Globalization;
 
-namespace Estruturadedecisao
+namespace PrototipoEstruturaDeDecisao
 {
     class Program
     {
@@ -12,6 +13,8 @@ namespace Estruturadedecisao
         }
         public static void TelaInicial()
         {
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("||                  Primeira Pagina                     ||");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("||---------Exercicios de estrutura de decisão-----------||");
             Console.WriteLine("|| 1 Exercicio                                 Digite 1 ||");
@@ -26,61 +29,82 @@ namespace Estruturadedecisao
             Console.WriteLine("|| 10 Exercicio                                Digite 10||");
             Console.WriteLine("||------------------------------------------------------||");
             Console.WriteLine("||Segunda Pagina-------------------------------Digite 0 ||");
-            int esc = int.Parse(Console.ReadLine());
-
-            switch (esc)
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||Escolher um exercicio especifico----------- Digite 100||");
+            Console.WriteLine("");
+            string esc1 = (Console.ReadLine());
+            int esc = 0;
+            if (int.TryParse(esc1, out esc))
             {
-                case 0:
-                    Console.Clear();
-                    SegundaTela();
-                    break;
-                case 1:
-                    Console.Clear();
-                    Exercicio1();
-                    break;
-                case 2:
-                    Console.Clear();
-                    Exercicio2();
-                    break;
-                case 3:
-                    Console.Clear();
-                    Exercicio3();
-                    break;
-                case 4:
-                    Console.Clear();
-                    Exercicio4();
-                    break;
-                case 5:
-                    Console.Clear();
-                    Exercicio5();
-                    break;
-                case 6:
-                    Console.Clear();
-                    Exercicio6();
-                    break;
-                case 7:
-                    Console.Clear();
-                    Exercicio7();
-                    break;
-                case 8:
-                    Console.Clear();
-                    Exercicio8();
-                    break;
-                case 9:
-                    Console.Clear();
-                    Exercicio9();
-                    break;
-                case 10:
-                    Console.Clear();
-                    Exercicio10();
-                    break;
-            }
 
-            Console.Clear();
-            TelaInicial();
+                switch (esc)
+                {
+                    case 300195:
+                        Console.Clear();
+                        EasterEgg();
+                        break;
+                    case 0:
+                        Console.Clear();
+                        SegundaTela();
+                        break;
+                    case 100:
+                        Console.Clear();
+                        EscolhDeTela2();
+                        break;
+                    case 1:
+                        Console.Clear();
+                        Exercicio1();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Exercicio2();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Exercicio3();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Exercicio4();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Exercicio5();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Exercicio6();
+                        break;
+                    case 7:
+                        Console.Clear();
+                        Exercicio7();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        Exercicio8();
+                        break;
+                    case 9:
+                        Console.Clear();
+                        Exercicio9();
+                        break;
+                    case 10:
+                        Console.Clear();
+                        Exercicio10();
+                        break;
+                }
+                Console.WriteLine("");
+                Console.WriteLine("Comando Invalido caso Primario, a atividade não consta na pagina!");
+                EscolhaDeTela();
+            }
+            Console.WriteLine("Comando Invalido caso Secundario, erro de leitura. O valor que você digitou não pode ser recebido!");
+            EscolhaDeTela();
         }
         public static void SegundaTela()
         {
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("||                   Segunga Pagina                     ||");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("||---------Exercicios de estrutura de decisão-----------||");
             Console.WriteLine("|| 11 Exercicio                                Digite 1 ||");
@@ -95,60 +119,75 @@ namespace Estruturadedecisao
             Console.WriteLine("|| 20 Exercicio                                Digite 10||");
             Console.WriteLine("||------------------------------------------------------||");
             Console.WriteLine("||Terceira Pagina------------------------------Digite 0 ||");
-            int esc = int.Parse(Console.ReadLine());
-
-            switch (esc)
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||Escolher um exercicio especifico----------- Digite 100||");
+            Console.WriteLine("");
+            string esc1 = (Console.ReadLine());
+            int esc = 0;
+            if (int.TryParse(esc1, out esc))
             {
-                case 0:
-                    Console.Clear();
-                    TerceiraTela();
-                    break;
-                case 1:
-                    Console.Clear();
-                    Exercicio11();
-                    break;
-                case 2:
-                    Console.Clear();
-                    Exercicio12();
-                    break;
-                case 3:
-                    Console.Clear();
-                    Exercicio13();
-                    break;
-                case 4:
-                    Console.Clear();
-                    Exercicio14();
-                    break;
-                case 5:
-                    Console.Clear();
-                    Exercicio15();
-                    break;
-                case 6:
-                    Console.Clear();
-                    Exercicio16();
-                    break;
-                case 7:
-                    Console.Clear();
-                    Exercicio17();
-                    break;
-                case 8:
-                    Console.Clear();
-                    Exercicio18();
-                    break;
-                case 9:
-                    Console.Clear();
-                    Exercicio19();
-                    break;
-                case 10:
-                    Console.Clear();
-                    Exercicio20();
-                    break;
+
+                switch (esc)
+                {
+                    case 0:
+                        Console.Clear();
+                        TerceiraTela();
+                        break;
+                    case 1:
+                        Console.Clear();
+                        Exercicio11();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Exercicio12();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Exercicio13();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Exercicio14();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Exercicio15();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Exercicio16();
+                        break;
+                    case 7:
+                        Console.Clear();
+                        Exercicio17();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        Exercicio18();
+                        break;
+                    case 9:
+                        Console.Clear();
+                        Exercicio19();
+                        break;
+                    case 10:
+                        Console.Clear();
+                        Exercicio20();
+                        break;
+                }
+                Console.WriteLine("");
+                Console.WriteLine("Comando Invalido caso Primario, a atividade não consta na pagina!");
+                EscolhaDeTela();
             }
-            Console.Clear();
-            TelaInicial();
+            Console.WriteLine("Comando Invalido caso Secundario, erro de leitura. O valor que você digitou não pode ser recebido!");
+            EscolhaDeTela();
+
         }
         public static void TerceiraTela()
         {
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("||                   Terceira Pagina                    ||");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("||---------Exercicios de estrutura de decisão-----------||");
             Console.WriteLine("|| 21 Exercicio                                Digite 1 ||");
@@ -160,25 +199,56 @@ namespace Estruturadedecisao
             Console.WriteLine("|| 27 Exercicio                                Digite 7 ||");
             Console.WriteLine("|| 28 Exercicio                                Digite 8 ||");
             Console.WriteLine("||------------------------------------------------------||");
-            Console.WriteLine("||Tela Inicial---------------------------------Digite 0 ||");
-            int esc = int.Parse(Console.ReadLine());
-
-            switch (esc)
+            Console.WriteLine("||Primeira Pagina------------------------------Digite 0 ||");
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||                                                      ||");
+            Console.WriteLine("||Escolher um exercicio especifico----------- Digite 100||");
+            Console.WriteLine("");
+            string esc1 = (Console.ReadLine());
+            int esc = 0;
+            if (int.TryParse(esc1, out esc))
             {
-                case 0:
-                    Console.Clear();
-                    TelaInicial();
-                    break;
+
+                switch (esc)
+                {
+                    case 0:
+                        Console.Clear();
+                        TelaInicial();
+                        break;
+                    case 1:
+                        Console.Clear();
+                        Exercicio21();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Exercicio22();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Exercicio23();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Exercicio24();
+                        break;
+
+                }
+                Console.WriteLine("");
+                Console.WriteLine("Comando Invalido caso Primario, a atividade não consta na pagina!");
+                EscolhaDeTela();
             }
-            Console.Clear();
-            TelaInicial();
+            Console.WriteLine("Comando Invalido caso Secundario, erro de leitura. O valor que você digitou não pode ser recebido!");
+            EscolhaDeTela();
         }
 
         public static void EscolhaDeTela()
         {
             Console.WriteLine("");
-            Console.WriteLine("Digite 0 para voltar a tela inicial: ");
+            Console.WriteLine("Escolha a opção que você deseja: ");
+            Console.WriteLine(" 0 para ir a TELA INICIAL e 1 para escolher um Exercicio Especifico");
             int esc = 0;
+
             if (int.TryParse(Console.ReadLine(), out esc)) // verifica se e um numero
             {
                 if (esc == 0)
@@ -186,19 +256,163 @@ namespace Estruturadedecisao
                     Console.Clear();
                     TelaInicial();
                 }
+                else if (esc == 1)
+                {
+
+                    Console.Clear();
+                    EscolhDeTela2();
+                }
 
             }
-            else
-            {
-                Console.WriteLine("esc Inválido");
-            }
+            Console.WriteLine("Comando Invalido caso Secundario, erro de leitura. O valor que você digitou não pode ser recebido!");
+            EscolhaDeTela();
+
+
         }
+        public static void EscolhDeTela2()
+        {
+            Console.WriteLine("Escolha um exercicio especifico: ");
+            string esc1 = (Console.ReadLine());
+            int esc = 0;
+            if (int.TryParse(esc1, out esc))
+            {
+
+                switch (esc)
+                {
+                    case 1:
+                        Console.Clear();
+                        Exercicio1();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Exercicio2();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Exercicio3();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Exercicio4();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Exercicio5();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Exercicio6();
+                        break;
+                    case 7:
+                        Console.Clear();
+                        Exercicio7();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        Exercicio8();
+                        break;
+                    case 9:
+                        Console.Clear();
+                        Exercicio9();
+                        break;
+                    case 10:
+                        Console.Clear();
+                        Exercicio10();
+                        break;
+                    case 11:
+                        Console.Clear();
+                        Exercicio11();
+                        break;
+                    case 12:
+                        Console.Clear();
+                        Exercicio12();
+                        break;
+                    case 13:
+                        Console.Clear();
+                        Exercicio13();
+                        break;
+                    case 14:
+                        Console.Clear();
+                        Exercicio14();
+                        break;
+                    case 15:
+                        Console.Clear();
+                        Exercicio15();
+                        break;
+                    case 16:
+                        Console.Clear();
+                        Exercicio16();
+                        break;
+                    case 17:
+                        Console.Clear();
+                        Exercicio17();
+                        break;
+                    case 18:
+                        Console.Clear();
+                        Exercicio18();
+                        break;
+                    case 19:
+                        Console.Clear();
+                        Exercicio19();
+                        break;
+                    case 20:
+                        Console.Clear();
+                        Exercicio20();
+                        break;
+                    case 21:
+                        Console.Clear();
+                        Exercicio21();
+                        break;
+                    case 22:
+                        Console.Clear();
+                        Exercicio22();
+                        break;
+                    case 23:
+                        Console.Clear();
+                        Exercicio23();
+                        break;
+                    case 24:
+                        Console.Clear();
+                        Exercicio24();
+                        break;
+
+                }
+                Console.WriteLine("");
+                Console.WriteLine("Comando Invalido!");
+                EscolhaDeTela();
+            }
+            Console.WriteLine("Comando Invalido caso Secundario, erro de leitura. O valor que você digitou não pode ser recebido!");
+            EscolhaDeTela();
+
+
+        }
+        public static void EasterEgg()
+        {
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("|FaceBook: https://www.facebook.com/marcos.viniciuswac");
+            Console.WriteLine("");
+            Console.WriteLine("|Instagram: https://www.instagram.com/marcl.x/?hl=pt-br");
+            Console.WriteLine("");
+            Console.WriteLine("|Twitter: https://twitter.com/MarcosV10865185");
+            Console.WriteLine("");
+            Console.WriteLine("|Github:https://github.com/MarcosVinc");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("|Emulador de SuperNintendo: https://drive.google.com/file/d/1Y5DoZrt16avq3NXH39IAA0gFLQk4SBAT/view?usp=sharing");
+            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+
+            EscolhaDeTela();
+
+        }
+
 
         public static void Exercicio1()
         {
             Console.WriteLine("||---------------------- EXERCICIO 1 ----------------------------||");
             Console.WriteLine(" Faça um Programa que peça dois números e imprima o maior deles ");
             Console.WriteLine("Digite os dois numeros: ");
+            Console.WriteLine("Esse exercicio foi feito em VETOR![]");
+            Console.WriteLine("Digite com espaço entre os números, exemplo: 1  2");
             string[] ex = Console.ReadLine().Split(' ');
             double nun1 = 0;
             double nun2 = 0;
@@ -1024,28 +1238,28 @@ namespace Estruturadedecisao
 
         public static void Exercicio17()
         {
-                Console.WriteLine("||---------------------- EXERCICIO 17 ----------------------------||");
-                Console.WriteLine("Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto");
-                Console.WriteLine("Digite o ano: ");
-                string ano = Console.ReadLine();
-                double anoBissexto = 0;
-                if (double.TryParse(ano, out anoBissexto))
+            Console.WriteLine("||---------------------- EXERCICIO 17 ----------------------------||");
+            Console.WriteLine("Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto");
+            Console.WriteLine("Digite o ano: ");
+            string ano = Console.ReadLine();
+            double anoBissexto = 0;
+            if (double.TryParse(ano, out anoBissexto))
+            {
+
+
+                if (((anoBissexto % 400) == 0) || (anoBissexto % 4 == 0 && anoBissexto % 100 != 0))
                 {
-
-
-                    if (((anoBissexto % 400) == 0) || (anoBissexto % 4 == 0 && anoBissexto % 100 != 0))
-                    {
-                        Console.WriteLine("Ano Bissexto");
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("Esse ano não é bissexto");
-                    }
+                    Console.WriteLine("Ano Bissexto");
 
                 }
+                else
+                {
+                    Console.WriteLine("Esse ano não é bissexto");
+                }
 
-            
+            }
+
+
             EscolhaDeTela();
 
         }
@@ -1086,17 +1300,304 @@ namespace Estruturadedecisao
         public static void Exercicio19()
         {
             Console.WriteLine("||---------------------- EXERCICIO 19 ----------------------------||");
-            Console.WriteLine("Pergunta: ");
-            EscolhaDeTela();
+            Console.WriteLine("Pergunta:Faça um Programa que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades");
+            Console.WriteLine("do mesmo");
+            Console.WriteLine("");
+            Console.WriteLine("Digite um numero inteiro: ");
+            int nun = 0;
+            if (int.TryParse(Console.ReadLine(), out nun))
+            {
 
+                if (nun >= 1001)
+                {
+                    Console.WriteLine($"Esse numero e maior que 1000! {nun}");
+                    EscolhaDeTela();
+
+                }
+                else if (nun >= 0 && nun <= 1000)
+                {
+                    int centena = 0;
+                    int dezena = 0;
+                    int unidade = 0;
+
+                    centena = nun / 100;
+                    dezena = (nun % 100) / 10;
+                    unidade = (nun % 100) % 10;
+                    Console.WriteLine($"Centena {centena}, dezena {dezena}, unidade {unidade}");
+
+
+                }
+
+
+            }
+
+            EscolhaDeTela();
         }
         public static void Exercicio20()
         {
             Console.WriteLine("||---------------------- EXERCICIO 20 ----------------------------||");
-            Console.WriteLine("Pergunta: ");
+            Console.WriteLine(" Faça um Programa para leitura de três notas parciais de um aluno.");
+            Console.WriteLine("O programa deve calcular a média alcançada por aluno e apresentar.");
+            Console.WriteLine(". A mensagem Aprovado, se a média for maior ou igual a 7, com a respectiva média alcançada");
+            Console.WriteLine("A mensagem Reprovado, se a média for menor do que 7, com a respectiva média alcançada;");
+            Console.WriteLine(" A mensagem Aprovado com Distinção, se a média for igual a 10.");
+            Console.WriteLine("");
+            Console.WriteLine("Digite a primeira nota do aluno: ");
+            string nota1 = Console.ReadLine();
+            Console.WriteLine("Digite a segunda nota do aluno: ");
+            string nota2 = Console.ReadLine();
+            Console.WriteLine("Digite a terceira nota do aluno: ");
+            string nota3 = Console.ReadLine();
+            double n1 = 0;
+            double n2 = 0;
+            double n3 = 0;
+
+            if (double.TryParse(nota1, out n1) && double.TryParse(nota2, out n2) && double.TryParse(nota3, out n3))
+            {
+                double mediaDeNotas = (n1 + n2 + n3) / 3;
+
+                if (mediaDeNotas >= 7)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("|----------------------------------------|");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine($"O aluno foi Aprovado! Média alcançada: {mediaDeNotas:f2}");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine("|----------------------------------------|");
+                }
+                else if (mediaDeNotas < 7)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("|----------------------------------------|");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine($"O aluno foi Reprovado! Media alcançada: {mediaDeNotas:f2}");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine("|----------------------------------------|");
+                }
+                else if (mediaDeNotas == 10)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("|----------------------------------------|");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine($"O aluno foi Aprovado com Distinção! Média alcançada: {mediaDeNotas:f2}");
+                    Console.WriteLine("|                                        |");
+                    Console.WriteLine("|----------------------------------------|");
+                }
+                else
+                {
+                    Console.WriteLine("nota Inválida");
+
+                }
+
+
+
+            }
+
             EscolhaDeTela();
 
         }
+        public static void Exercicio21()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 21 ----------------------------||");
+            Console.WriteLine("Pergunta:. Faça um Programa para um caixa eletrônico ");
+            Console.WriteLine("O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas");
+            Console.WriteLine("As notas disponíveis serão as de 1,  10, 50 e 100 reais");
+            Console.WriteLine("O valor mínimo é de 10 reais e o máximo de 600 reais");
+            Console.WriteLine("O programa não deve se preocupar com a quantidade de notas existentes na máquina");
+            Console.WriteLine("");
+            Console.WriteLine("Qual o valor do saque ?");
+            double caixaeletronico = 0;
+            if (double.TryParse(Console.ReadLine(), out caixaeletronico))
+            {
+                double centena = 0;
+                double dez = 0;
+                double cinco = 0;
+                double um = 0;
+
+                centena = caixaeletronico / 100;
+                dez = (caixaeletronico % 100) / 10;
+                cinco = ((caixaeletronico % 100) % 5);
+                um = (caixaeletronico % 100) % 10;
+                if (caixaeletronico < 10)
+                {
+                    Console.WriteLine("Não coresponde ao valor minimo de R$ 10,00");
+                    EscolhaDeTela();
+
+
+                }
+                else if (caixaeletronico > 600)
+                {
+                    Console.WriteLine("Não coresponde ao valor maximo que e de ate R$ 600,00");
+                    EscolhaDeTela();
+                }
+
+                else
+                {
+                    Console.WriteLine($"A quantia a ser sacada e de R$: {caixaeletronico}");
+                    Console.WriteLine($"Notas de Cem reais = {Math.Floor(centena)}, notas de dez reais =  {Math.Floor(dez)}, e notas de um real = {Math.Floor(um)}");
+
+                }
+            }
+
+            EscolhaDeTela();
+        }
+        public static void Exercicio22()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 22 ----------------------------||");
+            Console.WriteLine("Pergunta:Faça um Programa que peça um número inteiro e determine se ele é par ou impar. Dica: utilize o operador módulo (resto da divisão) ");
+            Console.WriteLine("");
+            Console.WriteLine("Digite o numero inteiro: ");
+            int imparoupar = 0;
+            if (int.TryParse(Console.ReadLine(), out imparoupar))
+            {
+                int horaDaVerdade = imparoupar % 2;
+
+                if (horaDaVerdade == 0)
+                {
+                    Console.WriteLine("Este número par");
+                }
+                else
+                {
+                    Console.WriteLine("Esse número e impar");
+
+                }
+                EscolhaDeTela();
+
+            }
+
+        }
+        public static void Exercicio23()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 23 ----------------------------||");
+            Console.WriteLine("Pergunta:Faça um Programa que peça um número e informe se o número é inteiro ou decimal. Dica: utilize uma função de arredondamento ");
+            Console.WriteLine("");
+            Console.WriteLine("Digite o número: ");
+            decimal verificadorNumeral = 0;
+            if (decimal.TryParse(Console.ReadLine(), out verificadorNumeral))
+            {
+
+                if ((verificadorNumeral % 1) == 0)
+                {
+                    Console.WriteLine($"Este número e inteiro: {verificadorNumeral:F2}");
+                }
+                else
+                {
+                    Console.WriteLine($"Esse número e decimal: {verificadorNumeral:F2}");
+
+                }
+
+            }
+            EscolhaDeTela();
+        }
+        public static void Exercicio24()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 24 ----------------------------||");
+            Console.WriteLine("Pergunta: Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar ");
+            Console.WriteLine("O resultado da operação deve ser acompanhado de uma frase que diga se o número é: ");
+            Console.WriteLine("");
+            Console.WriteLine("Digite o primeiro Numero: ");
+            string primeiraEntrada = Console.ReadLine();
+            Console.WriteLine("Digite o segundo Numero: ");
+            string segundaEntrada = Console.ReadLine();
+
+            decimal px = 0;
+            decimal sx = 0;
+
+            if (decimal.TryParse(primeiraEntrada, out px) && decimal.TryParse(segundaEntrada, out sx))
+            {
+                Console.WriteLine("Qual dessas opções você deseja que o programa realize ?");
+                Console.WriteLine("a. par ou ímpar; b.positivo ou negativo; c.inteiro ou decimal.");
+                string escolha = Console.ReadLine();
+                if (escolha.ToLower() == "a")
+                {
+                    decimal hd1 = px % 2;
+                    decimal hd2 = sx % 2;
+
+                    if ((hd1 == 0) && (hd2 == 1))
+                    {
+                        Console.WriteLine($"Número par {px} Número impar {sx}");
+                    }
+                    else if (hd1 == 1 && hd2 == 0)
+                    {
+                        Console.WriteLine($"Número par {sx} Número impar {px}");
+                    }
+                    else if (hd1 == 0 && hd2 == 0)
+                    {
+                        Console.WriteLine($"Os dois números são pares {px} e {sx}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Os dois números são impares {px} e {sx} ");
+                    }
+
+                    EscolhaDeTela();
+                }
+                else if (escolha.ToLower() == "b")
+                {
+                    if (px >= 0 && sx >= 0)
+                    {
+                        Console.WriteLine($"Esses números são positivos: {px} e {sx}");
+                    }
+                    else if (px >= 0 && sx < 0)
+                    {
+                        Console.WriteLine($"Número positivo {px}, número negativo {sx}");
+                    }
+                    else if (sx >= 0 && px < 0)
+                    {
+                        Console.WriteLine($"Número positivo {sx}, número negativo {px}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Esses números são negativos: {px} e {sx}");
+                    }
+                    
+                     EscolhaDeTela();
+
+                   
+
+                }
+                else if (escolha.ToLower() == "c")
+                {
+                    decimal esc1 = px % 1;
+                    decimal esc2 = sx % 1;
+
+                    if (esc1 == 0 && esc2 == 0)
+                    {
+                        Console.WriteLine($"Esses números sao inteiros: {px} e {sx}");
+                    }
+
+                    else if (esc1 != 0 && esc2 == 0)
+                    {
+
+                        Console.WriteLine($"Número decimal: {px}, número inteiro {sx}");
+                    }
+
+                    else if (esc2 != 0 && esc1 == 0)
+                    {
+                        Console.WriteLine($"Número decimal: {sx}, número inteiro {px}");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"Os dois números são decimais: {px}, {sx}");
+
+                    }
+                    
+                    EscolhaDeTela();
+
+                  
+                }
+                else
+                {
+                    Console.WriteLine("Número invalido!!");
+                    EscolhaDeTela();
+                }
+
+            }
+             
+            EscolhaDeTela();
+        }
+
 
     }
 }
@@ -1115,7 +1616,4 @@ namespace Estruturadedecisao
     Console.WriteLine("||---------------------- EXERCICIO 3 ----------------------------||");
     Console.WriteLine("Pergunta: ");
     EscolhaDeTela();
-
 }*/
-
-
