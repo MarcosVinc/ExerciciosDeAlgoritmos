@@ -2,6 +2,7 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace PrototipoEstruturaDeDecisao
 {
@@ -232,6 +233,14 @@ namespace PrototipoEstruturaDeDecisao
                         Console.Clear();
                         Exercicio24();
                         break;
+                    case 5:
+                        Console.Clear();
+                        Exercicio25();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Exercicio26();
+                        break;
 
                 }
                 Console.WriteLine("");
@@ -375,7 +384,14 @@ namespace PrototipoEstruturaDeDecisao
                         Console.Clear();
                         Exercicio24();
                         break;
-
+                    case 25:
+                        Console.Clear();
+                        Exercicio25();
+                        break;
+                    case 26:
+                        Console.Clear();
+                        Exercicio26();
+                        break;
                 }
                 Console.WriteLine("");
                 Console.WriteLine("Comando Invalido!");
@@ -1596,6 +1612,136 @@ namespace PrototipoEstruturaDeDecisao
             }
              
             EscolhaDeTela();
+        }
+        public static void Exercicio25()
+        {
+
+            Console.WriteLine("||---------------------- EXERCICIO 25 ----------------------------||");
+            Console.WriteLine("Pergunta:Faça um programa que faça 5 perguntas para uma pessoa sobre um crime ");
+            Console.WriteLine(" ");
+            Console.WriteLine("Telefonou para a vítima?");
+            var telefonevitima = Console.ReadLine();
+            Console.WriteLine("Esteve no local do crime?");
+            var localcrime = Console.ReadLine();
+            Console.WriteLine("Mora perto da vítima?");
+            var moravitima = Console.ReadLine();
+            Console.WriteLine("Devia para a vítima?");
+            var dvitima = Console.ReadLine();
+            Console.WriteLine("Já trabalhou com a vítima?");
+            var trabalhouvitima = Console.ReadLine();
+            var aglutinadorDeVariaveis = telefonevitima + localcrime + moravitima + dvitima + trabalhouvitima;
+            var palavraChave = "sim";
+            int count = 0;
+            foreach (Match match in Regex.Matches(aglutinadorDeVariaveis, palavraChave, RegexOptions.IgnoreCase))
+            {
+                count++;
+            }
+
+            if (count == 2)
+            {
+                Console.WriteLine($"Suspeita ");
+            }
+            else if (count >= 3 && count <= 4)
+            {
+                Console.WriteLine($"Cúmplice");
+            }
+            else if (count == 5)
+            {
+                Console.WriteLine($"Assasino");
+
+            }
+            else
+            {
+                Console.WriteLine($"Inocente");
+
+            }
+
+            EscolhaDeTela();
+
+
+
+        }
+        public static void Exercicio26()
+        {
+            Console.WriteLine("Um posto está vendendo combustíveis com a seguinte tabela de descontos:");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("a. Álcool:");
+            Console.WriteLine("b. até 20 litros, desconto de 3% por litro");
+            Console.WriteLine("c. acima de 20 litros, desconto de 5% por litro");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("d. Gasolina:");
+            Console.WriteLine("e. até 20 litros, desconto de 4% por litro");
+            Console.WriteLine("f. acima de 20 litros, desconto de 6% por litro");
+            Console.WriteLine("");
+            Console.WriteLine("Gasolina ou Álcool, senhor ?");
+            var escolhaGA = Console.ReadLine();
+            if (escolhaGA.ToLower() == "gasolina")
+            {
+                Console.WriteLine("Quantos Litros você vai querer ?");
+                double abastecimentoLitro = int.Parse(Console.ReadLine());
+                if (abastecimentoLitro <= 20)
+                {
+                    double desconto = 0.10 * abastecimentoLitro;
+                    double valorPago = abastecimentoLitro - desconto;
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine($"Valor pago R$: {valorPago:F2}, desconto R$ {desconto:F2}");
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+
+                }
+                else
+                {
+                    double desconto = 0.15 * abastecimentoLitro;
+                    double valorPago = abastecimentoLitro - desconto;
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine($"Valor pago R$:{valorPago:F2}, desconto R$:{desconto:F2}");
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+
+
+                }
+
+            }
+            else if (escolhaGA.ToLower() == "alcool")
+            {
+
+
+                Console.WriteLine("Quantos Litros você vai querer ?");
+                double abastecimentoLitro = int.Parse(Console.ReadLine());
+                if (abastecimentoLitro <= 20)
+                {
+                    double desconto = 0.057 * abastecimentoLitro;
+                    double valorPago = abastecimentoLitro - desconto;
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine($"Valor pago R$: {valorPago:f2}, desconto R$:{desconto:f2}");
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+
+                }
+                else
+                {
+                    double desconto = 0.095 * abastecimentoLitro;
+                    double valorPago = abastecimentoLitro - desconto;
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine($"Valor pago R$:{valorPago:F2}, desconto R$:{desconto:F2}");
+                    Console.WriteLine("");
+                    Console.WriteLine("-----------------------------------------------------------");
+
+
+                }
+            }
+
+            EscolhaDeTela();
+
+
         }
 
 

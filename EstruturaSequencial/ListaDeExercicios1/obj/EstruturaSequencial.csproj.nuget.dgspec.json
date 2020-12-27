@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj": {}
+    "C:\\Users\\Marcos\\source\\repos\\Alg\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj": {
+    "C:\\Users\\Marcos\\source\\repos\\Alg\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj",
+        "projectUniqueName": "C:\\Users\\Marcos\\source\\repos\\Alg\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj",
         "projectName": "EstruturaSequencial",
-        "projectPath": "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj",
+        "projectPath": "C:\\Users\\Marcos\\source\\repos\\Alg\\EstruturaSequencial\\ListaDeExercicios1\\EstruturaSequencial.csproj",
         "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\EstruturaSequencial\\ListaDeExercicios1\\obj\\",
+        "outputPath": "C:\\Users\\Marcos\\source\\repos\\Alg\\EstruturaSequencial\\ListaDeExercicios1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",

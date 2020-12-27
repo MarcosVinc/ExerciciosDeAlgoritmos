@@ -10,3 +10,15 @@ C:\Users\Marcos\source\repos\ExerciciosDeAlgoritmos\EstruturaSequencial\ListaDeE
 C:\Users\Marcos\source\repos\ExerciciosDeAlgoritmos\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.dll
 C:\Users\Marcos\source\repos\ExerciciosDeAlgoritmos\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.pdb
 C:\Users\Marcos\source\repos\ExerciciosDeAlgoritmos\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.genruntimeconfig.cache
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\bin\Debug\netcoreapp3.1\EstruturaSequencial.exe
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\bin\Debug\netcoreapp3.1\EstruturaSequencial.deps.json
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\bin\Debug\netcoreapp3.1\EstruturaSequencial.runtimeconfig.json
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\bin\Debug\netcoreapp3.1\EstruturaSequencial.runtimeconfig.dev.json
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\bin\Debug\netcoreapp3.1\EstruturaSequencial.dll
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\bin\Debug\netcoreapp3.1\EstruturaSequencial.pdb
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.AssemblyInfoInputs.cache
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.AssemblyInfo.cs
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.dll
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.pdb
+C:\Users\Marcos\source\repos\Alg\EstruturaSequencial\ListaDeExercicios1\obj\Debug\netcoreapp3.1\EstruturaSequencial.genruntimeconfig.cache

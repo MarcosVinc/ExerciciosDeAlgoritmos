@@ -1,0 +1,13 @@
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\bin\Debug\netcoreapp3.1\EstruturaDeRepeticao.exe
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\bin\Debug\netcoreapp3.1\EstruturaDeRepeticao.deps.json
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\bin\Debug\netcoreapp3.1\EstruturaDeRepeticao.runtimeconfig.json
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\bin\Debug\netcoreapp3.1\EstruturaDeRepeticao.runtimeconfig.dev.json
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\bin\Debug\netcoreapp3.1\EstruturaDeRepeticao.dll
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\bin\Debug\netcoreapp3.1\EstruturaDeRepeticao.pdb
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\obj\Debug\netcoreapp3.1\EstruturaDeRepeticao.csprojAssemblyReference.cache
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\obj\Debug\netcoreapp3.1\EstruturaDeRepeticao.AssemblyInfoInputs.cache
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\obj\Debug\netcoreapp3.1\EstruturaDeRepeticao.AssemblyInfo.cs
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\obj\Debug\netcoreapp3.1\EstruturaDeRepeticao.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\obj\Debug\netcoreapp3.1\EstruturaDeRepeticao.dll
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\obj\Debug\netcoreapp3.1\EstruturaDeRepeticao.pdb
+C:\Users\Marcos\source\repos\Alg\EstruturaDeRepeticao\obj\Debug\netcoreapp3.1\EstruturaDeRepeticao.genruntimeconfig.cache
