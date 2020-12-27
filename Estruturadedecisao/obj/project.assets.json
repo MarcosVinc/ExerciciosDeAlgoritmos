@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\Estruturadedecisao\\Estruturadedecisao.csproj",
+      "projectUniqueName": "C:\\Users\\Marcos\\source\\repos\\Alg\\Estruturadedecisao\\Estruturadedecisao.csproj",
       "projectName": "Estruturadedecisao",
-      "projectPath": "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\Estruturadedecisao\\Estruturadedecisao.csproj",
+      "projectPath": "C:\\Users\\Marcos\\source\\repos\\Alg\\Estruturadedecisao\\Estruturadedecisao.csproj",
       "packagesPath": "C:\\Users\\Marcos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcos\\source\\repos\\ExerciciosDeAlgoritmos\\Estruturadedecisao\\obj\\",
+      "outputPath": "C:\\Users\\Marcos\\source\\repos\\Alg\\Estruturadedecisao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marcos\\AppData\\Roaming\\NuGet\\NuGet.Config",
