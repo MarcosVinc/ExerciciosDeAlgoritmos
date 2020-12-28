@@ -241,6 +241,10 @@ namespace PrototipoEstruturaDeDecisao
                         Console.Clear();
                         Exercicio26();
                         break;
+                    case 7:
+                        Console.Clear();
+                        Exercicio27();
+                        break;
 
                 }
                 Console.WriteLine("");
@@ -391,6 +395,10 @@ namespace PrototipoEstruturaDeDecisao
                     case 26:
                         Console.Clear();
                         Exercicio26();
+                        break;
+                    case 27:
+                        Console.Clear();
+                        Exercicio27();
                         break;
                 }
                 Console.WriteLine("");
@@ -1742,6 +1750,317 @@ namespace PrototipoEstruturaDeDecisao
             EscolhaDeTela();
 
 
+        }
+        public static void Exercicio27()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 27 ----------------------------||");
+            Console.WriteLine("Pergunta: Uma fruteira está vendendo frutas com a seguinte tabela de preços: ");
+            Console.WriteLine("-----------------Até 5 Kg ---------- Acima de 5 Kg");
+            Console.WriteLine("Morango ----- R$ 2,50 por Kg ------ R$ 2,20 por Kg");
+            Console.WriteLine("Maçã -------- R$ 1,80 por Kg ------ R$ 1,50 por Kg");
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("O que vai querer frequesa ?");
+            var EscolhaFruta = Console.ReadLine();
+            if (EscolhaFruta.ToLower() == "morango")
+            {
+                Console.WriteLine("Quantos quilos vai querer ?");
+                int quilos = int.Parse(Console.ReadLine());
+
+
+
+                if (quilos <= 5)
+                {
+                    double ateCincoQuilos = 2.50 * quilos;
+                    Console.WriteLine($"Valor a ser pago R${ateCincoQuilos}");
+
+                }
+                else if (quilos > 5)
+                {
+                    double maisQueCincoQuilos = 2.20 * quilos;
+
+                    if ((quilos >= 8) && ((maisQueCincoQuilos >= 25)))
+                    {
+                        double porcentagem = maisQueCincoQuilos / 100;
+                        Console.WriteLine($"Valor a ser pago R$:{maisQueCincoQuilos - porcentagem}");
+                    }
+
+
+                }
+
+
+
+            }
+            if (EscolhaFruta.ToLower() == "maça")
+            {
+                Console.WriteLine("Quantos quilos vai querer ?");
+                int quilos = int.Parse(Console.ReadLine());
+
+                double ateCincoQuilosMaça = 1.80 * quilos;
+                double maisQueCincoQuilosMaça = 1.50 * quilos;
+                double porcentagem = maisQueCincoQuilosMaça / 100;
+
+                if (quilos <= 5)
+                {
+                    if (ateCincoQuilosMaça < 25)
+                    {
+
+                        Console.WriteLine($"Valor a ser pago R${ateCincoQuilosMaça}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Valor a ser pago R$:{ateCincoQuilosMaça - porcentagem}");
+
+                    }
+
+
+                }
+                else if (quilos > 5)
+                {
+                    if ((quilos >= 8) && ((maisQueCincoQuilosMaça >= 25)))
+                    {
+                        Console.WriteLine($"Valor a ser pago R$:{maisQueCincoQuilosMaça - porcentagem}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Valor a ser pago R$:{maisQueCincoQuilosMaça }");
+
+                    }
+
+
+                }
+            }
+
+            EscolhaDeTela();
+        }
+        public static void Exercicio28()
+        {
+            Console.WriteLine("||---------------------- EXERCICIO 28 ----------------------------||");
+            Console.WriteLine("Pergunta: O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira: ");
+            Console.WriteLine("");
+            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("             Até 5 Kg            Acima de 5 Kg");
+            Console.WriteLine("File Duplo  R$ 4,90 por Kg       R$ 5,80 por Kg");
+            Console.WriteLine("Alcatra     R$ 5,90 por Kg       R$ 6,80 por Kg");
+            Console.WriteLine("Picanha     R$ 6,90 por Kg       R$ 7,80 por Kg");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("Qual o tipo de carne você quer");
+            var tipoDeCarne = Console.ReadLine();
+            Console.WriteLine("");
+            Console.WriteLine($"Quantos quilos da carne {tipoDeCarne}, você quer ?");
+            int quiloCarne = int.Parse(Console.ReadLine());
+            Console.WriteLine("Caixa: Dinheiro ou cartão senhor(a) ?");
+            var escolha = Console.ReadLine();
+            if (escolha.ToLower() == "cartao")
+            {
+                if (tipoDeCarne.ToLower() == "file duplo")
+                {
+                    if (quiloCarne < 5)
+                    {
+                        double precoCarne = quiloCarne * 4.90;
+                        double precoComDesconto = precoCarne * 0.05;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}. DESCONTO 5% . VALOR A PAGAR R$:{quiloCarne - precoComDesconto:F2}.");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+
+                    }
+                    else
+                    {
+                        double precoCarne = quiloCarne * 5.80;
+                        double precoComDesconto = precoCarne * 0.05;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}. DESCONTO 5% . VALOR A PAGAR R$:{quiloCarne - precoComDesconto:F2}.");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+                    }
+
+
+                }
+
+                else if (tipoDeCarne.ToLower() == "alcatra")
+                {
+                    if (quiloCarne < 5)
+                    {
+                        double precoCarne = quiloCarne * 5.90;
+                        double precoComDesconto = precoCarne * 0.05;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}. DESCONTO 5% . VALOR A PAGAR R$:{quiloCarne - precoComDesconto:F2}.");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+                    }
+                    else
+                    {
+                        double precoCarne = quiloCarne * 6.80;
+                        double precoComDesconto = precoCarne * 0.05;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}. DESCONTO 5% . VALOR A PAGAR R$:{quiloCarne - precoComDesconto:F2}.");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+                    }
+
+                }
+                else if (tipoDeCarne.ToLower() == "picanha")
+                {
+                    if (quiloCarne < 5)
+                    {
+                        double precoCarne = quiloCarne * 6.90;
+                        double precoComDesconto = precoCarne * 0.05;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}. DESCONTO 5% . VALOR A PAGAR R$:{quiloCarne - precoComDesconto:F2}.");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+                    }
+                    else
+                    {
+                        double precoCarne = quiloCarne * 7.80;
+                        double precoComDesconto = precoCarne * 0.05;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}. DESCONTO 5% . VALOR A PAGAR R$:{quiloCarne - precoComDesconto:F2}.");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+                    }
+
+                }
+
+            }
+            else if (escolha.ToLower() == "dinheiro")
+            {
+
+                if (tipoDeCarne.ToLower() == "file duplo")
+                {
+                    if (quiloCarne < 5)
+                    {
+                        double precoCarne = quiloCarne * 4.90;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}.VALOR A PAGAR R$:{precoCarne:F2}");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+
+                    }
+                    else
+                    {
+                        double precoCarne = quiloCarne * 5.80;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}.VALOR A PAGAR R$:{precoCarne:F2}");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+                    }
+
+
+                }
+
+                else if (tipoDeCarne.ToLower() == "alcatra")
+                {
+                    if (quiloCarne < 5)
+                    {
+                        double precoCarne = quiloCarne * 5.90;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}.VALOR A PAGAR R$:{precoCarne:F2}");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+                    }
+                    else
+                    {
+                        double precoCarne = quiloCarne * 6.80;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}.VALOR A PAGAR R$:{precoCarne:F2}");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+                    }
+
+                }
+                else if (tipoDeCarne.ToLower() == "picanha")
+                {
+                    if (quiloCarne < 5)
+                    {
+                        double precoCarne = quiloCarne * 6.90;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}.VALOR A PAGAR R$:{precoCarne:F2}"); ;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+                    }
+                    else
+                    {
+                        double precoCarne = quiloCarne * 7.80;
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------");
+                        Console.WriteLine("             Hipermercado Tabajara           ");
+                        Console.WriteLine("Endereço: Casa do caralho, 69, Bairro: Cu do mundo");
+                        Console.WriteLine("");
+                        Console.WriteLine("               CUPOM FISCAL                  ");
+                        Console.WriteLine($"QTD {quiloCarne} KG.  VALOR TOTAL R$:{precoCarne:F2}. TIPO DE PAGAMENTO {escolha.ToUpper()}.VALOR A PAGAR R$:{precoCarne:F2}");
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------------------------------------");
+
+                    }
+
+                }
+
+            }
+            EscolhaDeTela();
         }
 
 
