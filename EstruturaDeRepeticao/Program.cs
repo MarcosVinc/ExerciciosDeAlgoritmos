@@ -45,6 +45,13 @@ namespace EstruturaDeRepeticao
                             Exercicio01();
                             break;
                         }
+                    case 2:
+                        {
+                            Console.Clear();
+                            Exercicio02();
+                            break;
+
+                        }
                 }
 
 
@@ -72,11 +79,18 @@ namespace EstruturaDeRepeticao
                             TelaInicial();
                             break;
                         }
-                    case 1: 
+                    case 1:
                         {
                             Console.Clear();
                             Exercicio01();
                             break;
+                        }
+                    case 2:
+                        {
+                            Console.Clear();
+                            Exercicio02();
+                            break;
+
                         }
                 }
             }
@@ -109,5 +123,33 @@ namespace EstruturaDeRepeticao
             Console.WriteLine("");
             ExercicioEspecifico();
         }
+        public static void Exercicio02()
+        {
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("  Plano de vacinação   ");
+            Console.Write("Usuario: ");
+            var us = Console.ReadLine();
+            Console.Write("Senha: ");
+            var sen = Console.ReadLine();
+            while (us == sen)
+            {
+                Console.WriteLine("Erro!");
+                Console.WriteLine($"Senha igual ao o usuario, usuario{us} e senha {sen}");
+                Console.WriteLine("");
+                Console.WriteLine("Digite novamente:");
+                Console.WriteLine("Usuario: ");
+                us = Console.ReadLine();
+                Console.WriteLine("Senha: ");
+                sen = Console.ReadLine();
+
+            }
+            Console.WriteLine("| ----------------------------------------------- |");
+            Console.WriteLine("|    usuario e senha cadastradas com sucesso!     |");
+            Console.WriteLine("| ----------------------------------------------- |");
+            Console.WriteLine(" ");
+            ExercicioEspecifico();
+
+        }
+
     }
 }
