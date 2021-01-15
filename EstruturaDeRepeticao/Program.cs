@@ -52,6 +52,13 @@ namespace EstruturaDeRepeticao
                             break;
 
                         }
+                    case 3:
+                        {
+                            Console.Clear();
+                            Exercicio03();
+                            break;
+
+                        }
                 }
 
 
@@ -89,6 +96,13 @@ namespace EstruturaDeRepeticao
                         {
                             Console.Clear();
                             Exercicio02();
+                            break;
+
+                        }
+                    case 3:
+                        {
+                            Console.Clear();
+                            Exercicio03();
                             break;
 
                         }
@@ -134,7 +148,7 @@ namespace EstruturaDeRepeticao
             while (us == sen)
             {
                 Console.WriteLine("Erro!");
-                Console.WriteLine($"Senha igual ao o usuario, usuario{us} e senha {sen}");
+                Console.WriteLine($"Senha igual ao o usuario, usuario {us} e senha {sen}");
                 Console.WriteLine("");
                 Console.WriteLine("Digite novamente:");
                 Console.WriteLine("Usuario: ");
@@ -150,6 +164,67 @@ namespace EstruturaDeRepeticao
             ExercicioEspecifico();
 
         }
+        public static void Exercicio03() 
+        {
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Faça um programa que leia e valide as seguintes informações ");
+            Console.WriteLine("a. Nome: maior que 3 caracteres;");
+            Console.WriteLine("b. Idade: entre 0 e 150;");
+            Console.WriteLine("c. Salário: maior que zero;");
+            Console.WriteLine("d. Sexo: 'f' ou 'm';");
+            Console.WriteLine("Estado Civil: 's', 'c', 'v', 'd';");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("");
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
+            Console.Write("Idade: ");
+            double idade = double.Parse(Console.ReadLine());
+            Console.Write("Salário: ");
+            double salario = double.Parse(Console.ReadLine());
+            Console.Write("Sexo: ");
+            char sexo = char.Parse(Console.ReadLine());
+            Console.Write("Estado civil: ");
+            char escivil = char.Parse(Console.ReadLine());
 
-    }
+            while (idade <= 0 || idade > 150) 
+            {
+                Console.WriteLine("Idade invalida!");
+                Console.Write("Digite novamente a idade: ");
+                idade = double.Parse(Console.ReadLine());
+            
+            }
+            while (salario > 0)
+            {
+                Console.WriteLine("Salário invalido!");
+                Console.Write("Digite novamente o salário: ");
+                salario = double.Parse(Console.ReadLine());
+
+            }
+            while (sexo != 'm' || sexo != 'M' || sexo != 'f' || sexo != 'F' )
+            {
+                Console.WriteLine("sexo invalido!");
+                Console.Write("Digite novamente o sexo: ");
+                sexo = char.Parse(Console.ReadLine());
+
+            }
+            while (escivil != 's' || escivil != 'S' || escivil != 'c' || escivil != 'C' || escivil != 'v' || escivil != 'V' || escivil != 'd' || escivil != 'D')
+            {
+                Console.WriteLine("Estado civil invalido!");
+                Console.Write("Digite novamente o estado civil: ");
+                escivil = char.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("| ---------------------------------------------------------------------------------- |");
+            Console.WriteLine($"|                        informações cadastradas com sucesso!                       |");
+            Console.WriteLine($"Nome: {nome}, Idade:{idade}, Salário: {salario}, Sexo:{sexo}, Estado civil: {escivil}");
+            Console.WriteLine("| ---------------------------------------------------------------------------------- |");
+            Console.WriteLine(" ");
+            ExercicioEspecifico();
+
+
+
+
+        }
+
+        }
 }
